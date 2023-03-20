@@ -35,6 +35,6 @@ let storeLima = {
 
 };
 
-// function randomCustNum(minCust, maxCust) {
-//   return Math.floor(Math.random() * (maxCust - minCust) + minCust);
-// }
+function randomCustNum(minCust, maxCust) {
+  return Math.floor(Math.random() * (maxCust - minCust) + minCust);
+}
