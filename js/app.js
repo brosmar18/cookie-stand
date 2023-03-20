@@ -9,11 +9,14 @@ let storeSeattle = {
   avgCookieSale: 6.3,
   cookieTotal: [],
   cookiesPurchase: function(){
-    for(let i = 0; i < hours.length; i++);{
+    for(let i = 0; i < hours.length; i++){
+      console.log(i);
       this.cookieTotal[i] = randomCustNum(this.minCust, this.maxCust) * this.avgCookieSale;
     }
   }
 };
+storeSeattle.cookiesPurchase();
+console.log(storeSeattle.cookieTotal);
 
 let storeTokyo = {
   minCust: 3,
