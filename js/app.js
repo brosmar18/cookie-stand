@@ -7,7 +7,12 @@ let storeSeattle = {
   minCust: 23,
   maxCust: 65,
   avgCookieSale: 6.3,
-  cookieTotal: []
+  cookieTotal: [],
+  cookiesPurchase: function(){
+    for(let i = 0; i < hours.length; i++);{
+      this.cookieTotal[i] = randomCustNum(this.minCust, this.maxCust) * this.avgCookieSale;
+    }
+  }
 };
 
 let storeTokyo = {
