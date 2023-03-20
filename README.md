@@ -1,0 +1,2 @@
+# cookie-stand
+Object literals
