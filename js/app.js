@@ -1,8 +1,24 @@
 'use strict';
 console.log('js connected');
 
-let parentElement = document.getElementById('locations');
+let storeTable = document.getElementById('store-location-data');
 let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+
+let tableHead = document.createElement('tr');
+storeTable.appendChild(tableHead);
+let tableLocationHead = document.createElement('th');
+tableLocationHead.textContent = 'Location';
+tableHead.appendChild(tableLocationHead);
+
+for(let i = 0; i < hours.length; i++){
+  let tableHoursHead = document.createElement('th');
+  tableHoursHead.textContent = hours[i];
+  tableHead.appendChild(tableHoursHead);
+}
+
+let tableTotalHead = document.createElement('th');
+tableTotalHead.textContent = 'Total';
+tableHead.appendChild(tableTotalHead);
 
 function StoreLocation(storeName, minCust, maxCust, avgCookieSale, totalDailyCookies, cookieTotal) {
   this.storeName = storeName;
@@ -22,7 +38,6 @@ StoreLocation.prototype.cookiesPurchase = function() {
 
 StoreLocation.prototype.storeData = function(){
   this.cookiesPurchase();
-  let storeTable = document.getElementById('store-location-data');
   let storeRow = document.createElement('tr');
   storeTable.appendChild(storeRow);
   let storeHead = document.createElement('th');
