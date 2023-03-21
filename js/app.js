@@ -1,5 +1,7 @@
 'use strict';
 console.log('js connected');
+
+let parentElement = document.getElementById('locations');
 let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
 
@@ -7,39 +9,66 @@ let storeSeattle = {
   minCust: 23,
   maxCust: 65,
   avgCookieSale: 6.3,
+  totalDailyCookies: 0,
   cookieTotal: [],
+  // becuse this function has an 'object' that it belongs to, it is referred to as a method.
   cookiesPurchase: function(){
     for(let i = 0; i < hours.length; i++){
       console.log(i);
-      this.cookieTotal[i] = randomCustNum(this.minCust, this.maxCust) * this.avgCookieSale;
+      this.cookieTotal[i] = Math.floor(randomCustNum(this.minCust, this.maxCust) * this.avgCookieSale);
     }
+  },
+  storeData: function (){
+    this.cookiesPurchase();
+    let article = document.createElement('article');
+    parentElement.appendChild(article);
+    let storeDescription = document.createElement('p');
+    storeDescription.textContent = 'Salmon Cookies Co. in Seattle is a unique bakery that specializes in delicious and nutritious salmon-based cookies.';
+    article.appendChild(storeDescription);
+    let storeSalesList = document.createElement('ul');
+    article.appendChild(storeSalesList);
+    for (let i = 0; i < hours.length; i++) {
+      console.log(hours[i]);
+      let storeListItem = document.createElement('li');
+      this.totalDailyCookies += storeSeattle.cookieTotal[i];
+      storeListItem.textContent = `${hours[i]} : ${storeSeattle.cookieTotal[i]}`;
+      storeSalesList.appendChild(storeListItem);
+    }
+    let storetotalDailyCookies = document.createElement('li');
+    storetotalDailyCookies.textContent = `Total: ${this.totalDailyCookies}`;
+    storeSalesList.appendChild(storetotalDailyCookies);
+
   }
 };
-storeSeattle.cookiesPurchase();
-console.log(storeSeattle.cookieTotal);
+storeSeattle.storeData();
+
 
 let storeTokyo = {
   minCust: 3,
   maxCust: 24,
-  avgCookieSale: 1.2
+  avgCookieSale: 1.2,
+  cookieTotal: []
 
 };
 let storeDubai = {
   minCust: 11,
   maxCust: 38,
-  avgCookieSale: 3.7
+  avgCookieSale: 3.7,
+  cookieTotal: []
 
 };
 let storeParis = {
   minCust: 20,
   maxCust: 38,
-  avgCookieSale: 3.7
+  avgCookieSale: 3.7,
+  cookieTotal: []
 
 };
 let storeLima = {
   minCust: 2,
   maxCust: 16,
-  avgCookieSale: 4.6
+  avgCookieSale: 4.6,
+  cookieTotal: []
 
 };
 
