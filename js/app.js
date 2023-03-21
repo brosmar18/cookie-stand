@@ -136,7 +136,9 @@ let storeParis = {
     let article = document.createElement('article');
     parentElement.appendChild(article);
     let storeDescription = document.createElement('p');
+
     storeDescription.textContent = 'Paris';
+
     article.appendChild(storeDescription);
     let storeSalesList = document.createElement('ul');
     article.appendChild(storeSalesList);
@@ -174,7 +176,9 @@ let storeLima = {
     let article = document.createElement('article');
     parentElement.appendChild(article);
     let storeDescription = document.createElement('p');
+
     storeDescription.textContent = 'Lima';
+
     article.appendChild(storeDescription);
     let storeSalesList = document.createElement('ul');
     article.appendChild(storeSalesList);
