@@ -47,9 +47,40 @@ let storeTokyo = {
   minCust: 3,
   maxCust: 24,
   avgCookieSale: 1.2,
-  cookieTotal: []
+  totalDailyCookies: 0,
+  cookieTotal: [],
+  cookiesPurchase: function() {
+    for(let i = 0; i < hours.length; i++){
+      console.log(i);
+      this.cookieTotal[i] = Math.floor(randomCustNum(this.minCust, this.maxCust) * this.avgCookieSale);
+    }
+  },
+  storeData: function(){
+    this.cookiesPurchase();
+    let article = document.createElement('article');
+    parentElement.appendChild(article);
+    let storeDescription = document.createElement('p');
+    storeDescription.textContent = 'Salmon Cookies Co. in Tokyo is a unique bakery that specializes in delicious and nutritious salmon-based cookies.';
+    article.appendChild(storeDescription);
+    let storeSalesList = document.createElement('ul');
+    article.appendChild(storeSalesList);
+    for (let i = 0; i < hours.length; i++) {
+      console.log(hours[i]);
+      let storeListItem = document.createElement('li');
+      this.totalDailyCookies += storeTokyo.cookieTotal[i];
+      storeListItem.textContent = `${hours[i]} : ${storeTokyo.cookieTotal[i]}`;
+      storeSalesList.appendChild(storeListItem);
+    }
+    let storetotalDailyCookies = document.createElement('li');
+    storetotalDailyCookies.textContent = `Total: ${this.totalDailyCookies}`;
+    storeSalesList.appendChild(storetotalDailyCookies);
+
+  }
 
 };
+
+storeTokyo.storeData();
+
 let storeDubai = {
   minCust: 11,
   maxCust: 38,
