@@ -48,13 +48,13 @@ function randomCustNum(minCust, maxCust) {
 
 
 let storeSeattle = new StoreLocation('Seattle', 23, 65, 6.3, 0, []);
-// let storeTokyo = new StoreLocation('Tokyo', 3, 24, 1.2, []);
-// let storeDubai = new StoreLocation('Dubai', 11, 38, 3.7, []);
-// let storeParis = new StoreLocation('Paris', 20, 38, 2.3, []);
-// let storeLima = new StoreLocation('Lima', 2, 16, 4.6, []);
+let storeTokyo = new StoreLocation('Tokyo', 3, 24, 1.2, 0, []);
+let storeDubai = new StoreLocation('Dubai', 11, 38, 3.7, 0, []);
+let storeParis = new StoreLocation('Paris', 20, 38, 2.3, 0, []);
+let storeLima = new StoreLocation('Lima', 2, 16, 4.6, 0, []);
 
 storeSeattle.storeData();
-// storeTokyo.storeData();
-// storeDubai.storeData();
-// storeParis.storeData();
-// storeLima.storeData();
+storeTokyo.storeData();
+storeDubai.storeData();
+storeParis.storeData();
+storeLima.storeData();
