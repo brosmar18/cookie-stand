@@ -23,7 +23,7 @@ let storeSeattle = {
     let article = document.createElement('article');
     parentElement.appendChild(article);
     let storeDescription = document.createElement('p');
-    storeDescription.textContent = 'Salmon Cookies Co. in Seattle is a unique bakery that specializes in delicious and nutritious salmon-based cookies.';
+    storeDescription.textContent = 'Seattle';
     article.appendChild(storeDescription);
     let storeSalesList = document.createElement('ul');
     article.appendChild(storeSalesList);
@@ -60,7 +60,7 @@ let storeTokyo = {
     let article = document.createElement('article');
     parentElement.appendChild(article);
     let storeDescription = document.createElement('p');
-    storeDescription.textContent = 'Salmon Cookies Co. in Tokyo is a unique bakery that specializes in delicious and nutritious salmon-based cookies.';
+    storeDescription.textContent = 'Tokyo';
     article.appendChild(storeDescription);
     let storeSalesList = document.createElement('ul');
     article.appendChild(storeSalesList);
@@ -98,7 +98,7 @@ let storeDubai = {
     let article = document.createElement('article');
     parentElement.appendChild(article);
     let storeDescription = document.createElement('p');
-    storeDescription.textContent = 'Salmon Cookies Co. in Dubai is a unique bakery that specializes in delicious and nutritious salmon-based cookies.';
+    storeDescription.textContent = 'Dubai';
     article.appendChild(storeDescription);
     let storeSalesList = document.createElement('ul');
     article.appendChild(storeSalesList);
@@ -136,7 +136,9 @@ let storeParis = {
     let article = document.createElement('article');
     parentElement.appendChild(article);
     let storeDescription = document.createElement('p');
-    storeDescription.textContent = 'Salmon Cookies Co. in Paris is a unique bakery that specializes in delicious and nutritious salmon-based cookies.';
+
+    storeDescription.textContent = 'Paris';
+
     article.appendChild(storeDescription);
     let storeSalesList = document.createElement('ul');
     article.appendChild(storeSalesList);
@@ -174,7 +176,9 @@ let storeLima = {
     let article = document.createElement('article');
     parentElement.appendChild(article);
     let storeDescription = document.createElement('p');
-    storeDescription.textContent = 'Salmon Cookies Co. in Lima is a unique bakery that specializes in delicious and nutritious salmon-based cookies.';
+
+    storeDescription.textContent = 'Lima';
+
     article.appendChild(storeDescription);
     let storeSalesList = document.createElement('ul');
     article.appendChild(storeSalesList);
