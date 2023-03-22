@@ -68,11 +68,36 @@ StoreLocation.prototype.renderFooter = function(){
   let tFoot = document.getElementById('tableFooter');
   console.log('🚀 ~ file: app.js:69 ~ tFoot:', tFoot);
   let footerRow = document.createElement('tr');
-  let totalId = document.createElement('td');
+  let totalId = document.createElement('th');
   totalId.textContent = 'Total';
   footerRow.appendChild(totalId);
 
+  let grandTotal = 0;
 
+  for(let i = 0; i < hours.length; i++){
+    let hourlyTotal = 0;
+    //go through the cities
+    console.log(allStores);
+    for(let j = 0; j < allStores.length; j++){
+      // console.log(allStores[j].cookieTotal[i]);
+      //add to my hourly  total the city total for that hour.
+      //we have two variable i and j, that are arrays.
+      //so go to the citys array and find the number for how many allStores[] which will have Seattl.... and we will look at the total for hour
+      hourlyTotal = hourlyTotal + allStores[j].cookieTotal[i];
+      console.log('🚀 ~ file: app.js:87 ~ hourlyTotal:', hourlyTotal);
+      //adding up the grand total
+
+
+    }
+    grandTotal += hourlyTotal;
+    //get it out to the page appending it
+    let hourlyTotalTd = document.createElement('td');
+    hourlyTotalTd.textContent = hourlyTotal;
+    footerRow.appendChild(hourlyTotalTd);
+  }
+  let grandTotalTd = document.createElement('td');
+  grandTotalTd.textContent = grandTotal;
+  footerRow.appendChild(grandTotalTd);
 
   tFoot.appendChild(footerRow);
 
@@ -106,6 +131,9 @@ let storeTokyo = new StoreLocation('Tokyo', 3, 24, 1.2, 0, []);
 let storeDubai = new StoreLocation('Dubai', 11, 38, 3.7, 0, []);
 let storeParis = new StoreLocation('Paris', 20, 38, 2.3, 0, []);
 let storeLima = new StoreLocation('Lima', 2, 16, 4.6, 0, []);
+
+
+let allStores = [storeSeattle,storeTokyo,storeDubai,storeParis,storeLima];
 
 storeSeattle.storeData();
 storeTokyo.storeData();
