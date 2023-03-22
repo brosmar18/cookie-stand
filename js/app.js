@@ -2,7 +2,11 @@
 console.log('js connected');
 
 let storeTable = document.getElementById('store-location-data');
+
 let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+
+
+
 
 let tableHead = document.createElement('tr');
 storeTable.appendChild(tableHead);
@@ -37,13 +41,16 @@ StoreLocation.prototype.cookiesPurchase = function() {
 
 
 StoreLocation.prototype.storeData = function(){
+
   this.cookiesPurchase();
+
   let storeRow = document.createElement('tr');
   storeTable.appendChild(storeRow);
   let storeHead = document.createElement('th');
   storeHead.textContent = this.storeName;
   storeRow.appendChild(storeHead);
   for (let i = 0; i < hours.length; i++) {
+    //adding out total cookies per store
     this.totalDailyCookies += this.cookieTotal[i];
     let storeCell = document.createElement('td');
     storeCell.textContent = this.cookieTotal[i];
@@ -54,12 +61,44 @@ StoreLocation.prototype.storeData = function(){
   storeRow.appendChild(storeTotalDailyCookies);
 
 
-  console.log(this.cookieTotal);
+  // console.log(this.cookieTotal);
 };
+
+StoreLocation.prototype.renderFooter = function(){
+  let tFoot = document.getElementById('tableFooter');
+  console.log('🚀 ~ file: app.js:69 ~ tFoot:', tFoot);
+  let footerRow = document.createElement('tr');
+  let totalId = document.createElement('td');
+  totalId.textContent = 'Total';
+  footerRow.appendChild(totalId);
+
+
+
+  tFoot.appendChild(footerRow);
+
+};
+
+
+
+
+
+
+
+
+
 
 function randomCustNum(minCust, maxCust) {
   return Math.floor(Math.random() * (maxCust - minCust) + minCust);
 }
+
+
+
+
+
+
+
+
+
 
 
 let storeSeattle = new StoreLocation('Seattle', 23, 65, 6.3, 0, []);
@@ -73,3 +112,6 @@ storeTokyo.storeData();
 storeDubai.storeData();
 storeParis.storeData();
 storeLima.storeData();
+
+
+storeSeattle.renderFooter();
