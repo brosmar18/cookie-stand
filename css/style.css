@@ -9,7 +9,7 @@
 
 .header {
     background-color: #fff;
-    background-image: url(/images/header-image.png);
+    background-image: url("/images/header-image.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -80,7 +80,7 @@
 
 .about {
     color: white;
-    background-image: url(/images/about-image.png);
+    background-image: url("/images/about-image.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
