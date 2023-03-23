@@ -1,33 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Object Literals</title>
+    <title>Salmon Cookies Co.</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <header>
-        <h1>Cookie Sales</h1>
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="sales.html">Sales</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h2 id="locations">Locations</h2>
-        <table id="store-location-data">
-        </table>
 
-    </main>
-    <!-- <script src="js/app.js"></script> -->
+<body>
+    <div class="page">
+        <header class="header">
+            <nav class="nav">
+                <img class="logo" src="images/logo.png" alt="Salmon cookie business logo">
+                <ul class="nav__links">
+                    <li>
+                        <a class="nav__link" href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="nav__link" href="sales.html">Sales</a>
+                    </li>
+                    <li>
+                        <a class="nav__link" href="#">About</a>
+                    </li>
+                    <li>
+                        <a class="nav__link" href="#">Other</a>
+                    </li>
+                </ul>
+            </nav>
+            <h1 class="header__title">Salmon Cookies Co.</h1>
+            <p class="header__description">Get hooked on our salmon cookies - the perfect catch for your cravings!</p>
+        </header>
+        <main class="main">
+            <section class="about">
+                <h2 class="about__title">About Our Store</h2>
+                <div class="about__content">
+                    <p class="about__paragraph">Salmon Cookies Co. is a unique bakery that specializes in delicious and
+                        nutritious salmon-based cookies.</p>
+
+                    <p class="about__paragraph">Our cookies are made with high-quality salmon and other wholesome
+                        ingredients, and come in a variety of flavors to suit
+                        every taste. We're committed to providing our customers with a healthy snack alternative that
+                        doesn't sacrifice on taste
+                        or quality.</p>
+                    <p class="about__paragraph">Whether you're looking for a mid-day pick-me-up or a snack on-the-go,
+                        Salmon Cookies Co. has you covered."</p>
+                </div>
+            </section>
+
+        </main>
+        <footer class="footer" id="contacts">
+            <div class="footer__content">
+                <h2 class="footer__logo">Salmon Cookies Co.</h2>
+                <div class="footer__social-column">
+                    <h3 class="footer__social-heading">Address</h3>
+                    <ul class="footer__list">
+                        <li class="footer__list-item">123 Salmon Avenue
+                            Seattle, WA 98101</li>
+                    </ul>
+                </div>
+                <div class="footer__social-column">
+                    <h3 class="footer__social-heading">Hours</h3>
+                    <ul class="footer__list">
+                        <li class="footer__list-item">Monday - Thursday: 7am to 8pm</li>
+                        <li class="footer__list-item">Friday - Sunday: 7 am to 12pm</li>
+                    </ul>
+                </div>
+                <div class="footer__social-column">
+                    <h3 class="footer__social-heading">Social media</h3>
+                    <ul class="footer__list">
+                        <li class="footer__list-item"><a class="footer__social-link" href="#"><img
+                                    src="./images/facebook_white.svg" alt="facebook icon"
+                                    class="footer__social-icon">Facebook</a></li>
+                        <li class="footer__list-item"><a class="footer__social-link" href="#"><img
+                                    src="./images/instagram_white.svg" alt="Instagram icon"
+                                    class="footer__social-icon">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="footer__copyright">&copy; 2023 Bryan Garduno Gonzalez</p>
+        </footer>
+    </div>
 </body>
+
 </html>
