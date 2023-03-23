@@ -32,10 +32,10 @@
             </nav>
         </header>
         <main>
-            <section class="table-data">
-                <div class="table-data__text">
-                    <h2 class="table-data__title" id="locations">Cookie Sales Performance</h2>
-                    <p class="table-data__description">
+            <section class="about-sales">
+                <div class="about-sales__text">
+                    <h2 class="about-sales__title" id="locations">Cookie Sales Performance</h2>
+                    <p class="about-sales__description">
                         The table provided below showcases the sales performance of our cookie stores, displaying the
                         hourly
                         sales at each
@@ -52,6 +52,30 @@
                         our valued customers.
                     </p>
                 </div>
+            </section>
+            <section class="form" id="form">
+                <h2 class="form__title">Add Store Data</h2>
+                <form class="data-form">
+                    <fieldset class="data-form__fieldset">
+                        <label class="data-form__label" for="store-name">Store Name</label>
+                        <input required class="data-form__input" type="text" id="store-name"
+                            placeholder="In what city is this store located?">
+                        <label class="data-form__label" for="min-customer">Minimum Customers</label>
+                        <input required class="data-form__input" type="number" id="min-customer" min="0"
+                            placeholder="Enter the minimum number of Customers">
+                        <label class="data-form__label" for="max-customer">Maximum Customers</label>
+                        <input required class="data-form__input" type="number" id="max-customer" min="0"
+                            placeholder="Enter the maximum number of Customers">
+                        <label class="data-form__label" for="avg-cookie-sale">Average Cookie Sale</label>
+                        <input required class="data-form__input" type="number" min="0" id="avg-cookie-sale"
+                            placeholder="Average Cookies Sold per Hour">
+                    </fieldset>
+                    <fieldset class="data-form__fieldset">
+                        <button class="data-form__button" type="submit">Submit</button>
+                    </fieldset>
+                </form>
+            </section>
+            <section class="table-data">
                 <table id="store-location-data">
                     <tfoot id="tableFooter"></tfoot>
                 </table>

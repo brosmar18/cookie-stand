@@ -105,24 +105,9 @@ StoreLocation.prototype.renderFooter = function(){
 
 
 
-
-
-
-
-
-
-
 function randomCustNum(minCust, maxCust) {
   return Math.floor(Math.random() * (maxCust - minCust) + minCust);
 }
-
-
-
-
-
-
-
-
 
 
 
