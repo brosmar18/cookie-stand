@@ -69,7 +69,7 @@ StoreLocation.prototype.renderFooter = function(){
   console.log('🚀 ~ file: app.js:69 ~ tFoot:', tFoot);
   let footerRow = document.createElement('tr');
   let totalId = document.createElement('th');
-  totalId.textContent = 'Total';
+  totalId.textContent = 'Grand Total';
   footerRow.appendChild(totalId);
 
   let grandTotal = 0;
