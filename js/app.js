@@ -125,6 +125,29 @@ storeTokyo.storeData();
 storeDubai.storeData();
 storeParis.storeData();
 storeLima.storeData();
-
-
 storeSeattle.renderFooter();
+
+// Add this function to handle form submission
+function handleFormSubmit(event) {
+  event.preventDefault();
+
+  const storeName = document.getElementById("store-name").value;
+  const minCust = parseInt(document.getElementById("min-customer").value);
+  const maxCust = parseInt(document.getElementById("max-customer").value);
+  const avgCookieSale = parseFloat(document.getElementById("avg-cookie-sale").value);
+
+  const newStore = new StoreLocation(storeName, minCust, maxCust, avgCookieSale, 0, []);
+  allStores.push(newStore);
+  newStore.storeData();
+
+  // Clear the existing footer and re-render it with updated data
+  document.getElementById("tableFooter").innerHTML = "";
+  newStore.renderFooter();
+
+  // Clear the form input values
+  event.target.reset();
+}
+
+// Add an event listener to the form
+const form = document.querySelector(".data-form");
+form.addEventListener("submit", handleFormSubmit);

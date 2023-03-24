@@ -162,6 +162,9 @@
     outline-color: #2f80ed;
 }
 
+.data-form__button-reset {
+    margin-right: 30px;
+}
 
 .data-form__button {
     height: 60px;
