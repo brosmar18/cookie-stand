@@ -1,0 +1,85 @@
+.about-us {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: linear-gradient(180deg, #A5663E 0%, #4F6767 100%);
+}
+
+.about-us__photo {
+    width: 40%;
+    margin-right: 2rem;
+}
+
+.about-us__text {
+    max-width: 683px;
+    font-family: "Noto Serif", "Times New Roman", serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.footer-about-us {
+    background: linear-gradient(180deg, #A5663E 0%, #4F6767 100%);
+    color: #fff;
+    padding: 60px 100px 60px 80px;
+}
+
+.footer-about-us__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-about-us__logo {
+    width: 116px;
+    height: 21px;
+    color: #1D1F26;
+}
+
+.footer-about-us__social-heading {
+    font-family: "Inter", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+    color: #1D1F26;
+}
+
+.footer-about-us__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-about-us__list-item {
+    margin-bottom: 16px;
+    color: #343745;
+}
+
+
+.footer-about-us__social-icon {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+}
+
+.footer-about-us__social-link {
+    color: #343745;
+    text-decoration: none;
+    font-family: "Inter", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+}
+
+.footer-about-us__social-link:hover {
+    color: #c1c1c1;
+}
+
+.footer-about-us__copyright {
+    font-family: "Inter", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 108px 0 0 0;
+    color: #343745;
+}
